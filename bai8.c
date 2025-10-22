@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void in_day_tam_giac(){
+void in_day_tam_giac(void){
     int x;
     printf("nhap gia tri x: ");
     if (scanf("%d", &x) != 1 || x <= 0) {

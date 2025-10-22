@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void xeploaihocsinh(){
+void xeploaihocsinh(void){
     double diem_van, diem_toan, diem_anh;
     printf("nhap diem van: ");
     if (scanf("%lf", &diem_van) != 1) {

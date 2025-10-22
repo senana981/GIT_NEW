@@ -1,37 +1,53 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(void) {
+void giaiphuongtrinhbac2(void) {
     double a, b, c;
+    printf("nhap he so a: ");
+    if (scanf("%lf", &a) != 1) {
+        printf("du lieu khong hop le\n");
+        return;
+    }
+
+    printf("nhap he so b: ");
+    if (scanf("%lf", &b) != 1) {
+        printf("du lieu khong hop le\n");
+        return;
+    }
+
+    printf("nhap he so c: ");
+    if (scanf("%lf", &c) != 1) {
+        printf("du lieu khong hop le\n");
+        return;
+    }
+
     const double eps = 1e-9;
 
-    printf("Nhap a b c: ");
-    if (scanf("%lf %lf %lf", &a, &b, &c) != 3) return 0;
-
-    // Khong phai bac 2
     if (fabs(a) < eps) {
         if (fabs(b) < eps) {
-            if (fabs(c) < eps)  printf("Vo so nghiem\n");
-            else                printf("Vo nghiem\n");
+            if (fabs(c) < eps) {
+                printf("phuong trinh co vo so nghiem\n");
+            } else {
+                printf("phuong trinh vo nghiem\n");
+            }
         } else {
-            printf("Nghiem bac 1: x = %.6f\n", -c / b);
+            double x = -c / b;
+            printf("phuong trinh bac nhat, co mot nghiem: x = %.6f\n", x);
         }
-        return 0;
+        return;
     }
 
-    // Bac 2: ax^2 + bx + c = 0
-    double delta = b*b - 4*a*c;
+    double delta = b * b - 4.0 * a * c;
 
     if (delta > eps) {
-        double r = sqrt(delta);
-        double x1 = (-b + r) / (2*a);
-        double x2 = (-b - r) / (2*a);
-        printf("Hai nghiem phan biet:\n");
-        printf("x1 = %.6f\nx2 = %.6f\n", x1, x2);
+        double sqrt_delta = sqrt(delta);
+        double x1 = (-b + sqrt_delta) / (2.0 * a);
+        double x2 = (-b - sqrt_delta) / (2.0 * a);
+        printf("phuong trinh co 2 nghiem phan biet: x1 = %.6f, x2 = %.6f\n", x1, x2);
     } else if (fabs(delta) <= eps) {
-        printf("Nghiem kep: x = %.6f\n", -b / (2*a));
+        double x = -b / (2.0 * a);
+        printf("phuong trinh co nghiem kep: x = %.6f\n", x);
     } else {
-        printf("Vo nghiem thuc\n");
+        printf("phuong trinh vo nghiem\n");
     }
-    return 0;
 }

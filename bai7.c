@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void tinh_giai_thua(){
+void tinh_giai_thua(void){
     int n;
     printf("nhap so nguyen khong am: ");
     if (scanf("%d", &n) != 1 || n < 0) {

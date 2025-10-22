@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void in_thap_sao(){
+void in_thap_sao(void){
     int n;
     printf("nhap chieu cao n: ");
     if (scanf("%d", &n) != 1 || n <= 0) {

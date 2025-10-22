@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void in_fibonacci(){
+void in_fibonacci(void){
     long long n;
     printf("nhap gioi han n: ");
     if (scanf("%lld", &n) != 1 || n <= 0) {

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void in_bang_cuu_chuong(){
+void in_bang_cuu_chuong(void){
     int n;
     printf("nhap so chuong: ");
     if (scanf("%d", &n) != 1) {

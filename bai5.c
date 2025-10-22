@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void tinh_tien_dien(){
+void tinh_tien_dien(void){
     int so_dien;
     printf("nhap so dien (kWh): ");
     if (scanf("%d", &so_dien) != 1 || so_dien < 0) {

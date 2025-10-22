@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void nhap_tuan_tu(){
+void nhap_tuan_tu(void){
     int n;
     printf("nhap gia tri n: ");
     if (scanf("%d", &n) != 1 || n <= 0) {
