@@ -1,0 +1,19 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11
+LDFLAGS = -lm
+
+OBJS = main.o bai1.o bai2.o bai3.o bai4.o bai5.o bai6.o bai7.o bai8.o bai9.o bai10.o bai11.o
+
+.PHONY: all clean
+
+all: run
+	./run
+
+run: $(OBJS)
+	$(CC) $(OBJS) $(LDFLAGS) -o run
+
+%.o: %.c mylib.h
+	$(CC) $(CFLAGS) -c $<
+
+clean:
+	rm -f $(OBJS) run

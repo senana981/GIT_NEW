@@ -1,0 +1,11 @@
+
+# Binaries
+*.exe
+*.obj
+*.o
+
+# Build
+bin/
+obj/
+.vs/
+
