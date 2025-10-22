@@ -23,7 +23,7 @@ void giaiphuongtrinhbac2(){
             }
         } else {
             double x = -c / b;
-            printf("phuong trinh co 1 nghiem: x = %.6f\n", x);
+            printf("phuong trinh bac nhat, co mot nghiem: x = %.6f\n", x);
         }
         return;
     }
@@ -39,9 +39,6 @@ void giaiphuongtrinhbac2(){
         double x = -b / (2.0 * a);
         printf("phuong trinh co nghiem kep: x = %.6f\n", x);
     } else {
-        double real_part = -b / (2.0 * a);
-        double imaginary_part = sqrt(-delta) / (2.0 * a);
-        printf("phuong trinh co 2 nghiem phuc: x1 = %.6f + %.6fi, x2 = %.6f - %.6fi\n",
-               real_part, imaginary_part, real_part, imaginary_part);
+        printf("phuong trinh vo nghiem\n");
     }
 }
